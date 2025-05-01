@@ -62,6 +62,7 @@ pip install -r requirements.txt
 streamlit run streamlit_app/app.py
 Input ingredients in any language
 Get recipe and recommendations instantly
+```
 
 ![Alt text](screenshot_3.png)
 
