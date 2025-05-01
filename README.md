@@ -1,3 +1,4 @@
+Images/Screenshot 2025-05-01 163007.png
 # 🧠 Flavolingo 🍳
 ## Multilingual Recipe Recommendation System Powered by AI and NLP
 
@@ -6,7 +7,7 @@ Flavolingo is an intelligent recipe recommendation app that helps users discover
 
 Whether you're a foodie looking to explore international flavors or a developer exploring applied NLP, Flavolingo bridges the gap between language, culture, and cuisine.
 
-### ## Dataset
+### Dataset
 The dataset used for this project is a collection of recipes in multiple languages. You can access the dataset here:
 [Dataset Link - RecipeNLG](https://huggingface.co/datasets/mbien/recipe_nlg)
 
@@ -18,21 +19,18 @@ The original recipe dataset contains messy and inconsistent entries. Here's how 
 - ✅ **Normalization**: Ingredients and units were standardized
 - ✅ **Tokenization & vectorization**: TF-IDF was used to convert ingredient lists into numerical vectors
 
+Images/Screenshot 2025-05-01 162704.png
+
 ### 🌍 Translation Method
 Since the dataset includes recipes in multiple languages, a translation pipeline was built using:
 - **fastText** for automatic language detection (lid.176.bin)
-- **NLLB-200 (No Language Left Behind)** for translating non-English ingredients to English
-
-Translations were performed only on input text, while the dataset itself remained in English for consistency and performance.
+- **Marian MT (translation model)** for translating non-English ingredients to English
 
 ### 🤖 Recommendation System
 The core of Flavolingo’s recommendation engine is:
 - TF-IDF vectorization of ingredient lists
+- TF-IDF vectorization of cuisin lists
 - K-Nearest Neighbors (KNN) algorithm to find similar recipes based on vector proximity
-
-Results are ranked by cosine similarity, returning recipes most similar to user-provided ingredients.
-
-Example: If a user enters "tomato, basil, garlic", the app returns pasta, pizza, or soup recipes that include these items.
 
 ### 🧠 Business Applications
 - 🌎 **Multilingual food apps** for global users
@@ -42,17 +40,16 @@ Example: If a user enters "tomato, basil, garlic", the app returns pasta, pizza,
 - 👩‍🍳 **Recipe personalization** based on cultural or dietary preferences
 
 ### 🧪 Challenges Faced
-- 💾 **Large files**: GitHub rejected files over 100MB, requiring external hosting
+- 📉 **Shortage of data features**: The dataset lacked sufficient diversity in ingredient features, leading to limited recipe variety in recommendations.
 - 🌍 **Translation accuracy**: Maintaining semantic accuracy across languages
 - 🧹 **Data inconsistencies**: Ingredient names varied widely; normalization was tricky
-- 🧠 **Performance**: KNN and vector search on 2M+ recipes needed optimization
+- 🧠 **Platform Scalability Constraints**: Limited flexibility for adding multi-page flows or advanced UI.
 
 ### 🚀 Future Improvements
 - ✅ Replace fastText with newer multilingual models (e.g., M2M-100, SeamlessM4T)
 - ✅ Add filters (e.g., cooking time, cuisine, dietary restriction)
-- ✅ Deploy as a fully hosted web app
-- ✅ Use approximate nearest neighbor (ANN) search for scalability
-- ✅ Build user accounts and save favorites
+- ✅ Deploy as a fully hosted web app and mobile app
+- ✅ Add voice/image input
 
 ### 🖥️ How to Use the App
 Clone the repository:
@@ -62,5 +59,12 @@ git clone https://github.com/jhovanisabuchi/Flavolingo.git
 cd Flavolingo
 pip install -r requirements.txt
 streamlit run streamlit_app/app.py
+Input ingredients in any language
+Get recipe and recommendations instantly
+
+Images/Screenshot 2025-05-01 163421.png
+
+
+
 
 
