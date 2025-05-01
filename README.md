@@ -1,4 +1,5 @@
-Images/Screenshot 2025-05-01 163007.png
+![Alt text]("C:\Users\johnk\Flavolingo\Images\Screenshot 2025-05-01 163007.png")
+
 # 🧠 Flavolingo 🍳
 ## Multilingual Recipe Recommendation System Powered by AI and NLP
 
@@ -19,7 +20,7 @@ The original recipe dataset contains messy and inconsistent entries. Here's how 
 - ✅ **Normalization**: Ingredients and units were standardized
 - ✅ **Tokenization & vectorization**: TF-IDF was used to convert ingredient lists into numerical vectors
 
-Images/Screenshot 2025-05-01 162704.png
+![Alt text]("C:\Users\johnk\Flavolingo\Images\Screenshot 2025-05-01 162704.png")
 
 ### 🌍 Translation Method
 Since the dataset includes recipes in multiple languages, a translation pipeline was built using:
@@ -62,7 +63,7 @@ streamlit run streamlit_app/app.py
 Input ingredients in any language
 Get recipe and recommendations instantly
 
-Images/Screenshot 2025-05-01 163421.png
+![Alt text]("C:\Users\johnk\Flavolingo\Images\Screenshot 2025-05-01 163421.png")
 
 
 
